@@ -29,3 +29,10 @@ try:
     df.to_excel(output_file, index=False)
     print(f"Данные сохранены в файл: {output_file}")
 
+
+except FileNotFoundError:
+    print(f"Файл не найден: {input_file}")
+except KeyError:
+    print("Столбец 'Телефон' не найден в файле.")
+except Exception as e:
+    print(f"Произошла ошибка: {e}")
